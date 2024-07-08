@@ -1,0 +1,8 @@
+zippedData/im.db.zip filter=lfs diff=lfs merge=lfs -text
+zippedData/rt.movie_info.tsv.gz filter=lfs diff=lfs merge=lfs -text
+zippedData/rt.reviews.tsv.gz filter=lfs diff=lfs merge=lfs -text
+zippedData/tmdb.movies.csv.gz filter=lfs diff=lfs merge=lfs -text
+zippedData/tn.movie_budgets.csv.gz filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.gz filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
