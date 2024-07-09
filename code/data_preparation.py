@@ -49,7 +49,7 @@ def clean_columns(df):
     columns_to_keep = [
         'title_x', 'studio', 'domestic_gross_x', 'foreign_gross', 'production_budget', 'year',
         'runtime_minutes', 'genres', 'averagerating', 'numvotes', 'popularity', 'vote_average',
-        'vote_count', 'worldwide_gross'
+        'vote_count', 'worldwide_gross', 'genre_ids'
     ]
     
     df = df[columns_to_keep]
