@@ -1,23 +1,44 @@
-# System files
-.DS_Store
-Thumbs.db
-
-# Python bytecode files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Virtual environments
-venv/
+# Distribution / packaging
+.Python
 env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+.ipynb_checkpoints
 
-# Log files
-*.log
-
-# VSCode configurations
+# VS Code settings
 .vscode/
 
 # Data files
+cleanedData/
 zippedData/
+images/
+
+# OS-specific files
+.DS_Store
