@@ -15,6 +15,7 @@ def clean_bom_movie_gross(df):
     df['foreign_gross'] = df['foreign_gross'].fillna(0)
     df['studio'] = df['studio'].fillna('Unknown')
     df = df.dropna(subset=['domestic_gross'])
+    
     return df
 
 # cleaning the im.db selected tables
@@ -81,7 +82,7 @@ def clean_columns(df):
     return df
 
 # full clean function for EDA
-def full_clean():
+def full_clean(save_path='cleanedData/cleaned_data.csv'):
     # loading datasets
     bom_movie_gross_df = load_bom_movie_gross()
     movie_basics_df, movie_ratings_df = load_sqlite_db()
@@ -97,5 +98,8 @@ def full_clean():
     # merging cleaned datasets using the created merge function in merge_data.py
     merged_df = md.merge_data(bom_movie_gross_df, movie_basics_df, movie_ratings_df, tmdb_movies_df, tn_movie_budgets_df)
     merged_df = clean_columns(merged_df)
+    
+    # saving the cleaned DataFrame to a CSV file
+    merged_df.to_csv(save_path, index=False)
     
     return merged_df
