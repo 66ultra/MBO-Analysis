@@ -38,7 +38,6 @@ venv.bak/
 # Data files
 cleanedData/
 zippedData/
-images/
 
 # OS-specific files
 .DS_Store
