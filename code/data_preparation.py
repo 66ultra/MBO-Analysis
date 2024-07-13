@@ -82,7 +82,7 @@ def clean_columns(df):
     return df
 
 # full clean function for EDA
-def full_clean(save_path='cleanedData/cleaned_data.csv'):
+def full_clean(save_path='../cleanedData/cleaned_data.csv'):
     # loading datasets
     bom_movie_gross_df = load_bom_movie_gross()
     movie_basics_df, movie_ratings_df = load_sqlite_db()
