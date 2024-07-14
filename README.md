@@ -4,98 +4,84 @@
 
 ## Overview
 
-A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations.
+This project analyzes various factors that influence the box office success of movies. By examining data on domestic and foreign gross revenues, production budgets, genres, and ratings, the goal is to identify key trends and provide actionable insights for maximizing box office performance. The analysis includes data cleaning, exploratory data analysis (EDA), visualization, and correlation analysis.
 
 ## Business Problem
 
-Summary of the business problem you are trying to solve, and the data questions that you plan to answer in order to solve them.
-
-***
-Questions to consider:
-
-* What are the business's pain points related to this project?
-* How did you pick the data analysis question(s) that you did?
-* Why are these questions important from a business perspective?
-
-***
+The main business problem is to understand which factors most significantly impact a movie’s box office performance. This knowledge can help movie studios make data-driven decisions on budget allocation, genre selection, and marketing strategies. Movie studios need to maximize box office revenues but often face uncertainty about which factors most contribute to success. Understanding these relationships can inform strategic decisions, leading to more profitable movie productions and effective marketing campaigns.
 
 ## Data
 
-Describe the data being used for this project.
-
-***
-Questions to consider:
-
-* Where did the data come from, and how do they relate to the data analysis questions?
-* What do the data represent? Who is in the sample and what variables are included?
-* What is the target variable?
-* What are the properties of the variables you intend to use?
-
-***
+The dataset includes information on domestic and foreign gross revenues, production budgets, genres, average ratings, and the number of votes. Data was collected from various sources including IMDb, The Numbers, Box Office Mojo, and The MovieDB. The target variables are domestic gross, foreign gross, and worldwide gross revenues.
 
 ## Methods
 
-Describe the process for analyzing or modeling the data. For Phase 1, this will be descriptive analysis.
-
-***
-Questions to consider:
-
-* How did you prepare, analyze or model the data?
-* Why is this approach appropriate given the data and the business problem?
-
-***
+The process for analyzing the data included data cleaning and merging, exploratory data analysis (EDA), and visualization to understand the distribution and relationships within the data. Data preparation involved cleaning and merging datasets, handling missing values, and filtering relevant data. Analysis included EDA to explore data distribution and relationships. This approach allows for a comprehensive understanding of key factors influencing movie performance, supporting data-driven business decisions.
 
 ## Results
 
-Present your key results. For Phase 1, this will be findings from your descriptive analysis.
+Business Recommendations:
 
-***
-Questions to consider:
+1. Invest in High Production Budgets:
+   - Given the strong correlation with worldwide gross, investing in higher production budgets could yield better financial returns.
+2. Focus on Popular Genres:
+   - Biography-Drama-History and Action-Adventure-Animation movies tend to receive higher ratings, indicating a potential area for strategic focus.
+3. Target Global Markets:
+   - Since domestic and foreign grosses are highly correlated, a strategy that maximizes domestic performance is likely to succeed internationally as well.
 
-* How do you interpret the results?
-* How confident are you that your results would generalize beyond the data you have?
+### Correlation Heatmap
 
-***
+![Correlation Heatmap](images/correlation_heatmap.png)
 
-Here is an example of how to embed images from your sub-folder:
+### Scatter Plot: Domestic Gross vs. Foreign Gross
 
-### Visual 1
+![Scatter Plot: Domestic Gross vs. Foreign Gross](images/scatter_domestic_foreign_gross.png)
 
-![graph1](./images/viz1.png)
+### Scatter Plot: Production Budget vs. Worldwide Gross
+
+![Scatter Plot: Production Budget vs. Worldwide Gross](images/scatter_budget_worldwide_gross.png)
+
+### Scatter Plot: Runtime Minutes vs. Number of Votes
+
+![Scatter Plot: Runtime Minutes vs. Number of Votes](images/scatter_runtime_votes.png)
+
+### Bar Plot: Average Rating by Genre
+
+![Bar Plot: Average Rating by Genre](images/barplot_avg_rating_by_genre.png)
 
 ## Conclusions
 
-Provide your conclusions about the work you've done, including any limitations or next steps.
+My findings suggest that investing in higher production budgets and focusing on popular genres can enhance box office performance. Additionally, improving movie ratings through quality production and a balanced runtime, can attract more votes and increase revenues.
 
-***
-Questions to consider:
+1. Investment Strategy: Focus on movies with higher production budgets to maximize revenue potential.
 
-* What would you recommend the business do as a result of this work?
-* What are some reasons why your analysis might not fully solve the business problem?
-* What else could you do in the future to improve this project?
+2. Genre Selection: Prioritize genres like Biography-Drama-History and Action-Adventure-Animation movies that tend to receive higher ratings and audience engagement.
 
-***
+3. Global Market Strategy: Develop marketing and distribution strategies that enhance domestic performance, which in turn could boost international revenues when released internationally.
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+Please review my full analysis in [My Jupyter Notebook](Movie_Box_Office_Analysis.ipynb) or my [Presentation](PDF/Movie_Box_Office_Analysis_Presentation.pdf).
 
-For any additional questions, please contact **name & email, name & email**
+For any additional questions, please contact **Noah Meakins | <unknownerror66@outlook.com>**
 
 ## Repository Structure
 
-Describe the structure of your repository and its contents, for example:
-
 ```
-├── __init__.py                         <- .py file that signals to python these folders contain packages
-├── README.md                           <- The top-level README for reviewers of this project
-├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── DS_Project_Presentation.pdf         <- PDF version of project presentation
+├── __init__.py                          <- .py file that signals to python these folders contain packages
+├── README.md                            <- The top-level README for reviewers of this project
+├── cleanedData                          <- Folder for any finalized data
+│   ├── cleaned_data.csv                 <- final result of cleaned and merged data
+├── Movie_Box_Office_Analysis.ipynb      <- Narrative documentation of analysis in Jupyter notebook
+├── PDF                                  <- PDF folder for any PDF files used
+│   ├── DS_Project_Presentation.pdf      <- PDF version of project presentation
 ├── code
-│   ├── __init__.py                     <- .py file that signals to python these folders contain packages
-│   ├── visualizations.py               <- .py script to create finalized versions of visuals for project
-│   ├── data_preparation.py             <- .py script used to pre-process and clean data
-│   └── eda_notebook.ipynb              <- Notebook containing data exploration
-├── data                                <- Both sourced externally and generated from code
-└── images                              <- Both sourced externally and generated from code
+│   ├── __init__.py                      <- .py file that signals to python these folders contain packages
+│   ├── visualizations.py                <- .py script to create finalized versions of visuals for project
+│   ├── load_data.py                     <- .py script to load datasets from source files
+│   ├── merge_data.py                    <- .py script to merge cleaned datasets
+│   ├── data_preparation.py              <- .py script used to pre-process and clean data
+│   └── EDA of Provided Movie Data.ipynb <- Notebook containing data exploration
+├── data                                 <- Both sourced externally and generated from code
+└── images                               <- Both sourced externally and generated from code
 ```
