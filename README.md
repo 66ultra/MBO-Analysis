@@ -1,4 +1,4 @@
-# Title
+# Movie and Box Office Analysis
 
 **Author**: Noah Meakins
 
